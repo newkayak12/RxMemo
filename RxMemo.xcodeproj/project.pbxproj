@@ -12,20 +12,24 @@
 		7E89BEFB29AB02530046121E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E89BEFA29AB02530046121E /* ViewController.swift */; };
 		7E89BEFE29AB02530046121E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E89BEFC29AB02530046121E /* Main.storyboard */; };
 		7E89BF0129AB02530046121E /* RxMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7E89BEFF29AB02530046121E /* RxMemo.xcdatamodeld */; };
-		7E89BF0329AB02550046121E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E89BF0229AB02550046121E /* Assets.xcassets */; };
 		7E89BF0629AB02550046121E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E89BF0429AB02550046121E /* LaunchScreen.storyboard */; };
+		7E89BF0E29AB02F60046121E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E89BF0D29AB02F60046121E /* Assets.xcassets */; };
+		CCB830A4F4C30198F4E8E0AB /* Pods_RxMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72571117B27B47DAB97CCDA2 /* Pods_RxMemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		72571117B27B47DAB97CCDA2 /* Pods_RxMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E89BEF329AB02530046121E /* RxMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E89BEF629AB02530046121E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E89BEF829AB02530046121E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7E89BEFA29AB02530046121E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7E89BEFD29AB02530046121E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7E89BF0029AB02530046121E /* RxMemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RxMemo.xcdatamodel; sourceTree = "<group>"; };
-		7E89BF0229AB02550046121E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E89BF0529AB02550046121E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E89BF0729AB02550046121E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E89BF0D29AB02F60046121E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../AppIcons/Assets.xcassets; sourceTree = "<group>"; };
+		8ABB0121DD8E89C25830409F /* Pods-RxMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMemo.release.xcconfig"; path = "Target Support Files/Pods-RxMemo/Pods-RxMemo.release.xcconfig"; sourceTree = "<group>"; };
+		AEF1062FA9153B8E9F7BEA23 /* Pods-RxMemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMemo.debug.xcconfig"; path = "Target Support Files/Pods-RxMemo/Pods-RxMemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCB830A4F4C30198F4E8E0AB /* Pods_RxMemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D241DBB7F2CDF5FFA2E4014 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AEF1062FA9153B8E9F7BEA23 /* Pods-RxMemo.debug.xcconfig */,
+				8ABB0121DD8E89C25830409F /* Pods-RxMemo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7E89BEEA29AB02530046121E = {
 			isa = PBXGroup;
 			children = (
 				7E89BEF529AB02530046121E /* RxMemo */,
 				7E89BEF429AB02530046121E /* Products */,
+				1D241DBB7F2CDF5FFA2E4014 /* Pods */,
+				BD11D63E158078A5A6B2E46E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,12 +79,20 @@
 				7E89BEF829AB02530046121E /* SceneDelegate.swift */,
 				7E89BEFA29AB02530046121E /* ViewController.swift */,
 				7E89BEFC29AB02530046121E /* Main.storyboard */,
-				7E89BF0229AB02550046121E /* Assets.xcassets */,
+				7E89BF0D29AB02F60046121E /* Assets.xcassets */,
 				7E89BF0429AB02550046121E /* LaunchScreen.storyboard */,
 				7E89BF0729AB02550046121E /* Info.plist */,
 				7E89BEFF29AB02530046121E /* RxMemo.xcdatamodeld */,
 			);
 			path = RxMemo;
+			sourceTree = "<group>";
+		};
+		BD11D63E158078A5A6B2E46E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72571117B27B47DAB97CCDA2 /* Pods_RxMemo.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E89BF0A29AB02550046121E /* Build configuration list for PBXNativeTarget "RxMemo" */;
 			buildPhases = (
+				2D549DCF395B8E46770DD7E2 /* [CP] Check Pods Manifest.lock */,
 				7E89BEEF29AB02530046121E /* Sources */,
 				7E89BEF029AB02530046121E /* Frameworks */,
 				7E89BEF129AB02530046121E /* Resources */,
+				D7F179C7A0D4253BF28E6B87 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,12 +156,54 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E89BF0629AB02550046121E /* LaunchScreen.storyboard in Resources */,
-				7E89BF0329AB02550046121E /* Assets.xcassets in Resources */,
+				7E89BF0E29AB02F60046121E /* Assets.xcassets in Resources */,
 				7E89BEFE29AB02530046121E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D549DCF395B8E46770DD7E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RxMemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7F179C7A0D4253BF28E6B87 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxMemo/Pods-RxMemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxMemo/Pods-RxMemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RxMemo/Pods-RxMemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7E89BEEF29AB02530046121E /* Sources */ = {
@@ -286,6 +355,7 @@
 		};
 		7E89BF0B29AB02550046121E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEF1062FA9153B8E9F7BEA23 /* Pods-RxMemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -294,11 +364,13 @@
 				DEVELOPMENT_TEAM = NL7TARX6W5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RxMemo/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,6 +386,7 @@
 		};
 		7E89BF0C29AB02550046121E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8ABB0121DD8E89C25830409F /* Pods-RxMemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -322,11 +395,13 @@
 				DEVELOPMENT_TEAM = NL7TARX6W5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RxMemo/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
