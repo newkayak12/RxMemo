@@ -9,7 +9,7 @@ target 'RxMemo' do
 
 pod 'RxSwift', "6.2.0"
 pod 'RxCocoa'
-# pod 'Action'
+pod 'Action'
 pod 'NSObject+Rx'
 pod 'RxDataSources'
 pod 'RxCoreData'
