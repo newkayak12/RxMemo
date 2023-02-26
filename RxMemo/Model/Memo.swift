@@ -7,17 +7,17 @@
 
 import Foundation
 struct Memo: Equatable {
-    var contents: String
+    var content: String
     var insertDate: Date
     var identity: String
     
-    init(contents: String, insertDate: Date = Date()) {
-        self.contents = contents
+    init(content: String, insertDate: Date = Date()) {
+        self.content = content
         self.insertDate = insertDate
         self.identity = "\(insertDate.timeIntervalSinceReferenceDate)"
     }
     init(original: Memo, updateContent: String){
         self = original
-        self.contents = updateContent
+        self.content = updateContent
     }
 }
