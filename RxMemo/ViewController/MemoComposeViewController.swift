@@ -28,6 +28,32 @@ class MemoComposeViewController: UIViewController, ViewModelBindableType {
             .bind(to: viewModel.saveAction.inputs)
             .disposed(by: rx.disposeBag)
         
+       let willShowObsevable =  NotificationCenter.default.rx.notification(UIResponder.keyboardWillShowNotification)
+            .compactMap { $0.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue } //optionalUnwrapping
+            .map{ $0.cgRectValue.height }
+        let willHideObservable = NotificationCenter.default.rx.notification(UIResponder.keyboardWillHideNotification)
+            .map{ noti -> CGFloat in 0 }
+        let keybaordObservable = Observable.merge(willShowObsevable, willHideObservable)
+            .share()
+            
+        keybaordObservable
+//            .withUnretained(contentTextView)
+            .toContentInset(of: contentTextView)
+//            .subscribe(onNext: { tv, height in
+//                var inset = tv.contentInset
+//                inset.bottom = height
+//                tv.contentInset = inset
+//
+//                var scrollInset = tv.verticalScrollIndicatorInsets
+//                scrollInset.bottom = height
+//                tv.verticalScrollIndicatorInsets = scrollInset
+//            })
+            .bind(to: contentTextView.rx.contentInset)
+            .disposed(by: rx.disposeBag)
+        keybaordObservable.toScrollInset(of: contentTextView)
+            .bind(to: contentTextView.rx.verticalScrollIndicatorInsets)
+            .disposed(by: rx.disposeBag)
+            
     }
 
     override func viewDidLoad() {
@@ -42,4 +68,21 @@ class MemoComposeViewController: UIViewController, ViewModelBindableType {
         contentTextView.resignFirstResponder()
     }
     
+}
+
+extension ObservableType where Element == CGFloat {
+    func toContentInset(of textView: UITextView) -> Observable<UIEdgeInsets> {
+        return map { height in
+            var inset = textView.contentInset
+            inset.bottom = height
+            return inset
+        }
+    }
+    func toScrollInset(of textView: UITextView) -> Observable<UIEdgeInsets> {
+        return map { height in
+            var scrollInset = textView.verticalScrollIndicatorInsets
+            scrollInset.bottom = height
+            return scrollInset
+        }
+    }
 }

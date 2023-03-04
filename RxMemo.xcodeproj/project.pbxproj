@@ -28,6 +28,7 @@
 		7E89BEFE29AB02530046121E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E89BEFC29AB02530046121E /* Main.storyboard */; };
 		7E89BF0129AB02530046121E /* RxMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7E89BEFF29AB02530046121E /* RxMemo.xcdatamodeld */; };
 		7E89BF0629AB02550046121E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E89BF0429AB02550046121E /* LaunchScreen.storyboard */; };
+		7E97E81B29B2F62B00DDC7E8 /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E97E81A29B2F62B00DDC7E8 /* CoreDataStorage.swift */; };
 		CCB830A4F4C30198F4E8E0AB /* Pods_RxMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72571117B27B47DAB97CCDA2 /* Pods_RxMemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		7E89BF0029AB02530046121E /* RxMemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RxMemo.xcdatamodel; sourceTree = "<group>"; };
 		7E89BF0529AB02550046121E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E89BF0729AB02550046121E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E97E81A29B2F62B00DDC7E8 /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
 		8ABB0121DD8E89C25830409F /* Pods-RxMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMemo.release.xcconfig"; path = "Target Support Files/Pods-RxMemo/Pods-RxMemo.release.xcconfig"; sourceTree = "<group>"; };
 		AEF1062FA9153B8E9F7BEA23 /* Pods-RxMemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMemo.debug.xcconfig"; path = "Target Support Files/Pods-RxMemo/Pods-RxMemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				7E89BEFF29AB02530046121E /* RxMemo.xcdatamodeld */,
+				7E97E81A29B2F62B00DDC7E8 /* CoreDataStorage.swift */,
 			);
 			path = CoreDataStorage;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E6A074129AB092F005B711E /* MemoryStorage.swift in Sources */,
+				7E97E81B29B2F62B00DDC7E8 /* CoreDataStorage.swift in Sources */,
 				7E6A074D29AB0DEB005B711E /* MemoComposeViewModel.swift in Sources */,
 				7E6A075729AB12C1005B711E /* SceneCoordinator.swift in Sources */,
 				7E6A075329AB0FD6005B711E /* Scene.swift in Sources */,
