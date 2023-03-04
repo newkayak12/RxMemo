@@ -22,12 +22,12 @@
 		7E6A075529AB1240005B711E /* SceneCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6A075429AB1240005B711E /* SceneCoordinatorType.swift */; };
 		7E6A075729AB12C1005B711E /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6A075629AB12C1005B711E /* SceneCoordinator.swift */; };
 		7E6A075929AB1705005B711E /* CommonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6A075829AB1705005B711E /* CommonViewModel.swift */; };
+		7E6A075B29B2EFF7005B711E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E6A075A29B2EFF7005B711E /* Assets.xcassets */; };
 		7E89BEF729AB02530046121E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E89BEF629AB02530046121E /* AppDelegate.swift */; };
 		7E89BEF929AB02530046121E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E89BEF829AB02530046121E /* SceneDelegate.swift */; };
 		7E89BEFE29AB02530046121E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E89BEFC29AB02530046121E /* Main.storyboard */; };
 		7E89BF0129AB02530046121E /* RxMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7E89BEFF29AB02530046121E /* RxMemo.xcdatamodeld */; };
 		7E89BF0629AB02550046121E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E89BF0429AB02550046121E /* LaunchScreen.storyboard */; };
-		7E89BF0E29AB02F60046121E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E89BF0D29AB02F60046121E /* Assets.xcassets */; };
 		CCB830A4F4C30198F4E8E0AB /* Pods_RxMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72571117B27B47DAB97CCDA2 /* Pods_RxMemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +54,7 @@
 		7E6A075429AB1240005B711E /* SceneCoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinatorType.swift; sourceTree = "<group>"; };
 		7E6A075629AB12C1005B711E /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
 		7E6A075829AB1705005B711E /* CommonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewModel.swift; sourceTree = "<group>"; };
+		7E6A075A29B2EFF7005B711E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E89BEF329AB02530046121E /* RxMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E89BEF629AB02530046121E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E89BEF829AB02530046121E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,7 +62,6 @@
 		7E89BF0029AB02530046121E /* RxMemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RxMemo.xcdatamodel; sourceTree = "<group>"; };
 		7E89BF0529AB02550046121E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E89BF0729AB02550046121E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7E89BF0D29AB02F60046121E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../AppIcons/Assets.xcassets; sourceTree = "<group>"; };
 		8ABB0121DD8E89C25830409F /* Pods-RxMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMemo.release.xcconfig"; path = "Target Support Files/Pods-RxMemo/Pods-RxMemo.release.xcconfig"; sourceTree = "<group>"; };
 		AEF1062FA9153B8E9F7BEA23 /* Pods-RxMemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMemo.debug.xcconfig"; path = "Target Support Files/Pods-RxMemo/Pods-RxMemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -189,8 +189,8 @@
 				7E6A072F29AB050A005B711E /* ViewModel */,
 				7E6A072E29AB0502005B711E /* Model */,
 				7E89BEF629AB02530046121E /* AppDelegate.swift */,
+				7E6A075A29B2EFF7005B711E /* Assets.xcassets */,
 				7E89BEF829AB02530046121E /* SceneDelegate.swift */,
-				7E89BF0D29AB02F60046121E /* Assets.xcassets */,
 				7E89BF0729AB02550046121E /* Info.plist */,
 			);
 			path = RxMemo;
@@ -265,7 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E89BF0629AB02550046121E /* LaunchScreen.storyboard in Resources */,
-				7E89BF0E29AB02F60046121E /* Assets.xcassets in Resources */,
+				7E6A075B29B2EFF7005B711E /* Assets.xcassets in Resources */,
 				7E89BEFE29AB02530046121E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

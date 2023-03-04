@@ -18,40 +18,43 @@ class MemoryStorage: MemoStorageType {
     //초기 더미를 방출해야하니 Behavior
     //Rx에서 테이블 뷰 업데이트는 next를 해야 reload됨
     
-    private lazy var store = BehaviorSubject<[Memo]>(value: list)
+    
+    private lazy var sectionModel = MemoSectionModel(model: 0, items: list)
+    
+    private lazy var store = BehaviorSubject<[MemoSectionModel]>(value: [sectionModel])
     
     @discardableResult
     func createMemo(content: String) -> RxSwift.Observable<Memo> {
         let memo = Memo(content: content)
-        list.insert(memo, at: 0)
-        store.onNext(list) //리스트에서 next
+        sectionModel.items.insert(memo, at: 0)
+        store.onNext([sectionModel]) //리스트에서 next
         return Observable.just(memo) //결과 값 Observable
     }
     
     @discardableResult
-    func memoList() -> RxSwift.Observable<[Memo]> {
+    func memoList() -> RxSwift.Observable<[MemoSectionModel]> {
         return store
     }
     
     @discardableResult
     func update(memo: Memo, content: String) -> RxSwift.Observable<Memo> {
         let updated = Memo(original: memo, updateContent: content)
-        if let index = list.firstIndex(where:  { $0 == memo }) {
-            list.remove(at: index)
-            list.insert(updated, at: index)
+        if let index = sectionModel.items.firstIndex(where:  { $0 == memo }) {
+            sectionModel.items.remove(at: index)
+            sectionModel.items.insert(updated, at: index)
         }
         
-        store.onNext(list)
+        store.onNext([sectionModel])
         
         return Observable.just(updated)
     }
     
     @discardableResult
     func delete(memo: Memo) -> RxSwift.Observable<Memo> {
-        if let index = list.firstIndex(where: { $0 == memo }) {
-            list.remove(at: index)
+        if let index = sectionModel.items.firstIndex(where: { $0 == memo }) {
+            sectionModel.items.remove(at: index)
         }
-        store.onNext(list)
+        store.onNext([sectionModel])
 
         return Observable.just(memo)
     }

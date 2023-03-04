@@ -21,9 +21,12 @@ class MemoListViewController: UIViewController, ViewModelBindableType {
     func bindViewModel() {
         viewModel.title.drive(navigationItem.rx.title).disposed(by: rx.disposeBag)
         
-        viewModel.memoList.bind(to: listTableView.rx.items(cellIdentifier: "cell")) { row, memo, cell in
-            cell.textLabel?.text = memo.content
-        }.disposed(by: rx.disposeBag)
+        viewModel.memoList
+//            .bind(to: listTableView.rx.items(cellIdentifier: "cell")) { row, memo, cell in
+//                cell.textLabel?.text = memo.content
+//            }
+            .bind(to: listTableView.rx.items(dataSource: viewModel.dataSource))
+            .disposed(by: rx.disposeBag)
         
         addButton.rx.action = viewModel.makeCreateAction()
         
@@ -44,6 +47,13 @@ class MemoListViewController: UIViewController, ViewModelBindableType {
 ////        navigationItem.backBarButtonItem = backButton //action이 대체되지 않는다.
 //        navigationItem.hidesBackButton = true //숨기고 새로 추가
 //        navigationItem.leftBarButtonItem = backButton
+        
+        
+        
+        listTableView.rx.modelDeleted(Memo.self) //controlEvent를 리턴
+            .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
+            .bind(to: viewModel.deleteAction.inputs)
+            .disposed(by: rx.disposeBag)
     }
 
     override func viewDidLoad() {
